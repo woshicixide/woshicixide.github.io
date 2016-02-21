@@ -105,7 +105,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/PHP-设计模式/" style="font-size: 10px;">PHP,设计模式</a>
+						<a href="/tags/PHP-设计模式/" style="font-size: 10px;">PHP,设计模式</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a>
 					</div>
 				</section>
 				
@@ -168,6 +168,74 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-静态编译和动态编译区别" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/07/25/静态编译和动态编译区别/" class="article-date">
+  	<time datetime="2015-07-25T11:55:30.000Z" itemprop="datePublished">2015-07-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/25/静态编译和动态编译区别/">静态编译和动态编译区别</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <pre><code>今天在看apache和nginx的区别，其中看到了一个是这样的：apache支持静态和动态编译；而nginx只支持静态编译。
+
+那么什么是动态编译，什么又是静态编译呢，特地拿出了《鸟哥的linux私房菜》，特把重点总结如下。
+
+依据一个函数库**是否被编译到程序内部**可以把函数库分为两种：动态函数库和静态函数库：
+</code></pre><ol>
+<li><p>静态函数库<br>一般扩展名为（.a）,这类的函数库通常扩展名为libxxx.a 。<br>这类函数库在编译的时候会直接整合到程序中，所以利用静态函数库编译成的文件会比较大，这类函数库最大的优点就是编译成功的可执行文件可以独立运行，而不再需要向外部要求读取函数哭的内容；但是从升级难易度来看明显没有优势，如果函数库更新，需要重新编译。</p>
+</li>
+<li><p>动态函数库<br>动态函数库的扩展名一般为（.so），这类函数库通常名为libxxx.so 。<br>与静态函数库被整个捕捉到程序中不同，动态函数库在编译的时候，在程序里只有一个“指向”的位置而已，也就是说当可执行文件需要使用到函数库的机制时，程序才会去读取函数库来使用；也就是说可执行文件无法单独运行。</p>
+<p>综上可以知道，静态函数库可能都是源代码，而动态函数库本身就可能是一个可执行文件。</p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-PHP设计模式之观察者模式" class="article article-type-post" itemscope itemprop="blogPost">
   
